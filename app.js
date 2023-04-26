@@ -28,7 +28,7 @@ app.use((error,req,res,next)=>{
     const message = error.message;
     res.status(status).json({message:message});
 })
-mongoose.connect("mongo-connect-url-here"
+mongoose.connect("mongodb+srv://252landres:admin1@cluster0.3dljfbo.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true }
 ).then(result =>{
     app.listen(process.env.PORT || 8080); 
 }).catch(err =>{
